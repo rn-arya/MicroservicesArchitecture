@@ -10,12 +10,15 @@
         }
       ],
       "UpstreamPathTemplate": "/products{catchall}",
-      "UpstreamHttpMethod": [ "GET", "POST" ],    
+      "UpstreamHttpMethod": [ "GET", "POST" ],
       "RateLimitOptions": {
         "EnableRateLimiting": true,
         "Limit": 2,
         "Period": "60s",
         "PeriodTimespan": 60
+      },
+      "FileCacheOptions": {
+        "TtlSeconds": 60
       }
     },
     {
