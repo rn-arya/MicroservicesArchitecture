@@ -7,6 +7,7 @@ builder.Configuration.AddJsonFile("ocelot.json",optional:false,reloadOnChange:tr
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddOcelot(builder.Configuration);
+builder.Logging.AddConsole();
 
 var app = builder.Build();
 
